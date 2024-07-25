@@ -21,9 +21,26 @@ console.log('randomNumbers', randomNumbers, typeof randomNumbers);
 //inizializzo un countdown per poi far scomparire i numeri
 setTimeout(function(){
     console.log('timer finito')
+    randomnumContainer.innerHTML = '';
+},
+(timeWait - 1) * 1000);
+
+setTimeout(function(){
+//creo una variabile che mi tiene salvato i numeri indovinati
+    let guessNumber = 0;
+    const guessedNumberList = [];
+//creo un ciclo per l'inserimeto dei numeri che l'utente metterà
+    for (let i = 0; i < randomNumbers.length; i++) {
+        const UserNumber = parseInt(prompt(`inserisci il ${i + 1}° che hai appena visto`));
+        console.log('UserNumber', UserNumber, typeof UserNumber);
+        if (UserNumber == randomNumbers[i]) {
+            guessNumber++;
+            guessedNumberList.push(UserNumber);
+         }
+    }
+    alert(`Hai indovinato ${guessNumber} numeri. precisamente : ${guessedNumberList}`);
 },
 timeWait * 1000);
-
 
 
 
