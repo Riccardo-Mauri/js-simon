@@ -4,6 +4,9 @@ const minNumber = 1;
 const maxNumber = 30;
 const randomNumbers = [];
 const randomnumContainer = document.getElementById('numbers-container');
+const timeWait = 30;
+
+
 //creo un ciclo delle mie variabili in questo caso i numeri
 for (let i = 0; i < 5; i++) {
     const num = getRandomNumber(minNumber, maxNumber);
@@ -15,6 +18,11 @@ for (let i = 0; i < 5; i++) {
 }
 console.log('randomNumbers', randomNumbers, typeof randomNumbers);
 
+//inizializzo un countdown per poi far scomparire i numeri
+setTimeout(function(){
+    console.log('timer finito')
+},
+timeWait * 1000);
 
 
 
