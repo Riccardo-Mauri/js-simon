@@ -6,3 +6,13 @@ RESET
     padding: 0;
     box-sizing: border-box;
 }
+#numbers-container{
+    text-align: center;
+    font-weight: bolder;
+    font-size: 3rem;
+}
+#numbers-container > span{
+    padding: 30px;
+    background-color: lightcoral;
+    border: 1px solid green;
+}
